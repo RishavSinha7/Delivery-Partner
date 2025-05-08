@@ -1,4 +1,3 @@
-
 import { Check } from 'lucide-react';
 
 const FeaturesSection = () => {
@@ -32,6 +31,16 @@ const FeaturesSection = () => {
         "Safe transportation",
         "Insurance options available"
       ]
+    },
+    {
+      title: "Big Trucks",
+      description: "Long-distance haulage and commercial freight transportation",
+      image: "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      benefits: [
+        "Interstate logistics",
+        "Temperature-controlled options",
+        "Bulk cargo capacity"
+      ]
     }
   ];
 
@@ -49,7 +58,7 @@ const FeaturesSection = () => {
         </div>
 
         <div className="mt-10">
-          <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-8">
+          <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8">
             {features.map((feature, index) => (
               <div key={index} className="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className="flex-shrink-0">
