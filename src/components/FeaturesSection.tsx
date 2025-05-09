@@ -1,6 +1,19 @@
 import { Check } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const FeaturesSection = () => {
+  // State to track window size for improved responsiveness
+  const [windowWidth, setWindowWidth] = useState<number>(
+    typeof window !== 'undefined' ? window.innerWidth : 1200
+  );
+
+  // Handle window resize
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const features = [
     {
       title: "City Bikes",
@@ -45,36 +58,44 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <div id="trucks" className="py-12 bg-white">
+    <div id="trucks" className="py-6 sm:py-8 md:py-10 lg:py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:text-center">
-          <h2 className="text-base text-porter-red font-semibold tracking-wide uppercase">Services</h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-porter-black sm:text-4xl">
+        <div className="text-center">
+          <h2 className="text-sm sm:text-base text-porter-red font-semibold tracking-wide uppercase">Services</h2>
+          <p className="mt-2 text-2xl sm:text-3xl leading-8 font-extrabold tracking-tight text-porter-black sm:text-4xl">
             Transportation solutions for every need
           </p>
-          <p className="mt-4 max-w-2xl text-xl text-porter-gray lg:mx-auto">
+          <p className="mt-3 sm:mt-4 max-w-2xl text-lg sm:text-xl text-porter-gray mx-auto">
             Choose from our range of vehicles to match your transportation requirements
           </p>
         </div>
 
-        <div className="mt-10">
-          <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8">
+        <div className="mt-6 sm:mt-8 md:mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div 
+                key={index} 
+                className="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              >
                 <div className="flex-shrink-0">
-                  <img className="h-48 w-full object-cover" src={feature.image} alt={feature.title} />
+                  <img 
+                    className="h-40 sm:h-44 md:h-48 w-full object-cover" 
+                    src={feature.image} 
+                    alt={feature.title}
+                    loading="lazy" 
+                  />
                 </div>
-                <div className="flex-1 p-6 flex flex-col justify-between">
+                <div className="flex-1 p-4 sm:p-5 md:p-6 flex flex-col justify-between">
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-porter-black">{feature.title}</h3>
-                    <p className="mt-3 text-base text-porter-gray">{feature.description}</p>
-                    <ul className="mt-4 space-y-2">
+                    <h3 className="text-xl sm:text-2xl font-bold text-porter-black">{feature.title}</h3>
+                    <p className="mt-2 sm:mt-3 text-sm sm:text-base text-porter-gray">{feature.description}</p>
+                    <ul className="mt-3 sm:mt-4 space-y-1 sm:space-y-2">
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-start">
                           <div className="flex-shrink-0">
-                            <Check className="h-5 w-5 text-porter-red" />
+                            <Check className="h-4 w-4 sm:h-5 sm:w-5 text-porter-red" />
                           </div>
-                          <p className="ml-3 text-sm text-porter-darkGray">{benefit}</p>
+                          <p className="ml-2 sm:ml-3 text-xs sm:text-sm text-porter-darkGray">{benefit}</p>
                         </li>
                       ))}
                     </ul>
