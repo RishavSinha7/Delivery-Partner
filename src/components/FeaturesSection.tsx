@@ -5,7 +5,7 @@ const FeaturesSection = () => {
     {
       title: "City Bikes",
       description: "Quick deliveries for small packages within city limits",
-      image: "https://images.unsplash.com/photo-1558981852-426c6c22a060?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      image: "https://imgd.aeplcdn.com/664x374/n/cw/ec/113179/star-city-left-rear-three-quarter.jpeg?isig=0&q=80",
       benefits: [
         "Deliver within 45 minutes",
         "Live tracking",
@@ -15,7 +15,7 @@ const FeaturesSection = () => {
     {
       title: "City Trucks",
       description: "For moving furniture, appliances and heavy items",
-      image: "https://images.unsplash.com/photo-1586186551287-a267dc92fa4d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      image: "https://www.91trucks.com/_next/image?url=https%3A%2F%2Fimages.91trucks.com%2Ftrucks%2Fmodels%2F53%2F1089%2Fmahindra-bolero-city-pikup-2062057025.jpg%3Fw%3D640%26v%3D1234&w=640&q=75",
       benefits: [
         "Multiple truck types",
         "Expert drivers",
@@ -25,7 +25,7 @@ const FeaturesSection = () => {
     {
       title: "Packers & Movers",
       description: "Complete home or office shifting solutions",
-      image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiifbtYlhngUPTTFcKgGQvd5DVCWWoqYNGVw&s",
       benefits: [
         "Professional packing",
         "Safe transportation",
@@ -35,7 +35,7 @@ const FeaturesSection = () => {
     {
       title: "Big Trucks",
       description: "Long-distance haulage and commercial freight transportation",
-      image: "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      image: "https://www.godigit.com/content/dam/godigit/directportal/en/mahindra-blazo-x-46.jpg",
       benefits: [
         "Interstate logistics",
         "Temperature-controlled options",

@@ -22,7 +22,7 @@ const HeroSection = () => {
                 <span className="block text-porter-red">right for you</span>
               </h1>
               <p className="mt-3 text-base text-porter-gray sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto lg:mx-0">
-                Porter provides intercity and intracity logistics services for individuals and businesses. Book mini trucks, bikes, and other commercial vehicles whenever you need.
+                Delivery Partner provides intercity and intracity logistics services for individuals and businesses. Book mini trucks, bikes, and other commercial vehicles whenever you need.
               </p>
             </div>
 
@@ -126,7 +126,7 @@ const HeroSection = () => {
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <img
           className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+          src="https://img.freepik.com/free-vector/loaders-carrying-armchair-boxes-new-house_74855-14095.jpg?semt=ais_hybrid&w=740"
           alt="Logistics delivery person with package"
         />
       </div>

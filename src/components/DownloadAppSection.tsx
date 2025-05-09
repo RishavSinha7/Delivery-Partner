@@ -8,7 +8,7 @@ const DownloadAppSection = () => {
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
           <div>
             <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-              Download the Porter App
+              Download the Delivery Partner App
             </h2>
             <p className="mt-3 max-w-3xl text-lg text-red-100">
               Book, track, and manage all your logistics needs on the go. Available for iOS and Android devices.

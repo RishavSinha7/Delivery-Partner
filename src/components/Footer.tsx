@@ -20,6 +20,7 @@ const Footer = () => {
             <ul className="mt-4 space-y-4">
               <li><a href="#" className="text-base text-gray-500 hover:text-gray-900">City Trucks</a></li>
               <li><a href="#" className="text-base text-gray-500 hover:text-gray-900">City Bikes</a></li>
+              <li><a href="#" className="text-base text-gray-500 hover:text-gray-900">Big Trucks</a></li>
               <li><a href="#" className="text-base text-gray-500 hover:text-gray-900">Packers & Movers</a></li>
               <li><a href="#" className="text-base text-gray-500 hover:text-gray-900">For Enterprise</a></li>
             </ul>
@@ -28,9 +29,7 @@ const Footer = () => {
             <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Support</h3>
             <ul className="mt-4 space-y-4">
               <li><a href="#" className="text-base text-gray-500 hover:text-gray-900">Help Center</a></li>
-              <li><a href="#" className="text-base text-gray-500 hover:text-gray-900">Safety Center</a></li>
               <li><a href="#" className="text-base text-gray-500 hover:text-gray-900">Community Guidelines</a></li>
-              <li><a href="#" className="text-base text-gray-500 hover:text-gray-900">COVID-19 Response</a></li>
             </ul>
           </div>
           <div>
@@ -39,7 +38,7 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-porter-red flex-shrink-0 mr-3" />
                 <span className="text-base text-gray-500">
-                  Porter Headquarters, 7th Floor, Tower A, Building 8, DLF Cyber City, Gurugram, Haryana - 122002
+                  Delivery Partner Headquarters, H3WP+6CM, Jagdeopath, Patna, Bihar 800014
                 </span>
               </li>
               <li className="flex items-center">
@@ -48,7 +47,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-porter-red flex-shrink-0 mr-3" />
-                <span className="text-base text-gray-500">support@porter.in</span>
+                <span className="text-base text-gray-500">support@deliverypartner.in</span>
               </li>
             </ul>
           </div>
@@ -81,7 +80,7 @@ const Footer = () => {
             </a>
           </div>
           <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-            &copy; 2023 Porter. All rights reserved.
+           &copy; 2023 Delivery Partner. All rights reserved
           </p>
         </div>
       </div>

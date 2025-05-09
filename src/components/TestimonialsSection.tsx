@@ -5,14 +5,14 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       id: 1,
-      content: "Porter made my house shifting so easy. The drivers were professional and helped with loading and unloading.",
+      content: "Delivery Partner made my house shifting so easy. The drivers were professional and helped with loading and unloading.",
       author: "Rahul Sharma",
       role: "Customer",
       rating: 5
     },
     {
       id: 2,
-      content: "I use Porter regularly for my business deliveries. Their bikes are always on time and reliable.",
+      content: "I use Delivery Partner regularly for my business deliveries. Their bikes are always on time and reliable.",
       author: "Priya Patel",
       role: "Business Owner",
       rating: 5
@@ -27,7 +27,7 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-12 bg-porter-lightGray">
+    <section id="how-it-works" className="py-12 bg-Delivery Partner-lightGray">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <h2 className="text-base text-porter-red font-semibold tracking-wide uppercase">Testimonials</h2>
@@ -35,7 +35,7 @@ const TestimonialsSection = () => {
             What our customers say
           </p>
           <p className="mt-4 max-w-2xl text-xl text-porter-gray lg:mx-auto">
-            Thousands of customers trust Porter for their logistics needs
+            Thousands of customers trust Delivery Partner for their logistics needs
           </p>
         </div>
 

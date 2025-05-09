@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
-              <span className="text-porter-red font-bold text-3xl">Porter</span>
+              <span className="text-porter-red font-bold text-3xl">Delivery Partner</span>
             </div>
             <div className="hidden md:ml-6 md:flex md:space-x-8">
               <a href="#trucks" className="inline-flex items-center px-1 pt-1 text-sm font-medium text-porter-black">
@@ -36,7 +36,7 @@ const Navbar = () => {
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-full text-porter-black bg-white hover:bg-porter-lightGray"
             >
               <MapPin className="mr-2 h-4 w-4 text-porter-red" />
-              <span>Bangalore</span>
+              <span>Patna</span>
             </Button>
           </div>
           <div className="-mr-2 flex items-center md:hidden">
@@ -90,7 +90,7 @@ const Navbar = () => {
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-full text-porter-black bg-white hover:bg-porter-lightGray"
             >
               <MapPin className="mr-2 h-4 w-4 text-porter-red" />
-              <span>Bangalore</span>
+              <span>Patna</span>
             </Button>
           </div>
         </div>
