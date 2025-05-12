@@ -140,7 +140,7 @@ const Auth = () => {
                               <Phone className="h-5 w-5 text-gray-400" />
                             </div>
                             <Input 
-                              placeholder="number daal chutiye" 
+                              placeholder="1234567890" 
                               className="pl-10" 
                               {...field} 
                               type="tel"
