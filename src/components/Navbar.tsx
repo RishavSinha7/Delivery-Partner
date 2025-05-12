@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { MapPin, Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { MapPin, Menu, X, LogIn } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { cn } from '@/lib/utils';
 
@@ -12,7 +13,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
-                <span className="text-porter-red font-bold text-3xl">Delivery Partner</span>
+              <Link to="/" className="text-porter-red font-bold text-3xl">Delivery Partner</Link>
             </div>
             <div className="hidden md:ml-6 md:flex md:space-x-8">
               <a href="#trucks" className="inline-flex items-center px-1 pt-1 text-sm font-medium text-porter-black">
@@ -29,13 +30,21 @@ const Navbar = () => {
               </a>
             </div>
           </div>
-          <div className="hidden md:ml-6 md:flex md:items-center">
+          <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
             <Button 
               variant="outline" 
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-full text-porter-black bg-white hover:bg-porter-lightGray"
             >
-
             </Button>
+            <Link to="/auth">
+              <Button 
+                variant="ghost"
+                className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-full text-porter-black hover:bg-porter-lightGray"
+              >
+                <LogIn className="mr-2 h-4 w-4 text-porter-red" />
+                <span>Login</span>
+              </Button>
+            </Link>
           </div>
           <div className="-mr-2 flex items-center md:hidden">
             <button
@@ -85,11 +94,15 @@ const Navbar = () => {
             Contact
           </a>
           <div className="pl-3 pr-4 py-2">
-            <Button 
-              variant="outline" 
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-full text-porter-black bg-white hover:bg-porter-lightGray"
-            >
-            </Button>
+            <Link to="/auth" className="block">
+              <Button 
+                variant="ghost"
+                className="w-full inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-full text-porter-black hover:bg-porter-lightGray"
+              >
+                <LogIn className="mr-2 h-4 w-4 text-porter-red" />
+                <span>Login</span>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
