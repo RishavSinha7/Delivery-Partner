@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ArrowLeft, Phone, Lock, UserPlus, LogIn, User } from "lucide-react";
+import { ArrowLeft, Phone, Lock, UserPlus, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -20,21 +20,17 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 
-// Define the validation schema for sign in with phone
+// Define the validation schema for sign in
 const signInSchema = z.object({
-  phone: z.string()
-    .min(10, { message: "Phone number must be at least 10 digits" })
-    .regex(/^\d+$/, { message: "Phone number must contain only digits" }),
+  phone: z.string().min(10, { message: "Please enter a valid phone number" }),
   password: z.string().min(6, { message: "Password must be at least 6 characters" }),
   isDriver: z.boolean().default(false),
 });
 
-// Define the validation schema for sign up with phone
+// Define the validation schema for sign up
 const signUpSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters" }),
-  phone: z.string()
-    .min(10, { message: "Phone number must be at least 10 digits" })
-    .regex(/^\d+$/, { message: "Phone number must contain only digits" }),
+  phone: z.string().min(10, { message: "Please enter a valid phone number" }),
   password: z.string().min(6, { message: "Password must be at least 6 characters" }),
   confirmPassword: z.string().min(6, { message: "Password must be at least 6 characters" }),
   isDriver: z.boolean().default(false),
@@ -81,7 +77,13 @@ const Auth = () => {
       title: "Sign In Successful",
       description: `Welcome back${data.isDriver ? " driver" : ""}!`,
     });
-    navigate("/");
+    
+    // Redirect to driver panel if signed in as driver, otherwise to home
+    if (data.isDriver) {
+      navigate("/driver");
+    } else {
+      navigate("/");
+    }
   };
 
   // Handle sign-up form submission
@@ -91,7 +93,13 @@ const Auth = () => {
       title: "Sign Up Successful",
       description: `Account created successfully${data.isDriver ? " as driver" : ""}!`,
     });
-    navigate("/");
+    
+    // Redirect to driver panel if signed up as driver, otherwise to home
+    if (data.isDriver) {
+      navigate("/driver");
+    } else {
+      navigate("/");
+    }
   };
 
   return (
@@ -139,13 +147,7 @@ const Auth = () => {
                             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                               <Phone className="h-5 w-5 text-gray-400" />
                             </div>
-                            <Input 
-                              placeholder="1234567890" 
-                              className="pl-10" 
-                              {...field} 
-                              type="tel"
-                              inputMode="numeric"
-                            />
+                            <Input placeholder="1234567890" className="pl-10" {...field} />
                           </div>
                         </FormControl>
                         <FormMessage />
@@ -225,12 +227,7 @@ const Auth = () => {
                       <FormItem>
                         <FormLabel>Full Name</FormLabel>
                         <FormControl>
-                          <div className="relative">
-                            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                              <User className="h-5 w-5 text-gray-400" />
-                            </div>
-                            <Input placeholder="John Doe" className="pl-10" {...field} />
-                          </div>
+                          <Input placeholder="John Doe" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -248,13 +245,7 @@ const Auth = () => {
                             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                               <Phone className="h-5 w-5 text-gray-400" />
                             </div>
-                            <Input 
-                              placeholder="1234567890" 
-                              className="pl-10" 
-                              {...field} 
-                              type="tel"
-                              inputMode="numeric"
-                            />
+                            <Input placeholder="1234567890" className="pl-10" {...field} />
                           </div>
                         </FormControl>
                         <FormMessage />
